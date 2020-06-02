@@ -1,0 +1,106 @@
+#home-create-point {
+  width: 90%;
+  max-width: 1100;
+  margin: 0 auto;
+}
+
+#home-create-point header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 45px;
+}
+
+#home-create-point header a {
+  color: var(--title-color);
+  font-weight: bold;
+
+  display: flex;
+  align-items: center;
+}
+
+#home-create-point header a span {
+  background-image: url('../assets/arrow-left.svg');
+  width: 20px;
+  height: 20px;
+  margin-right: 16px;
+
+  display: flex;
+}
+
+#home-create-point form {
+  background-color: var(--background-form);
+  max-width: 730px;
+  margin: 80px auto;
+  padding: 64px;
+  border-radius: 8px;
+}
+
+#home-create-point form h1 {
+  font-size: 36px;
+}
+
+#home-create-point form fieldset {
+  margin-top: 64px;
+  border: 0;
+}
+
+#home-create-point form legend {
+  margin-bottom: 40px;
+}
+
+#home-create-point form legend h2 {
+  font-size: 24px;
+}
+
+#home-create-point form .field {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  margin-bottom: 24px;
+}
+
+#home-create-point form .field-group {
+  display: flex;
+}
+
+#home-create-point form input,
+#home-create-point form select {
+  background-color: var(--background-color-input);
+  border: 0;
+  padding: 16px 24px;
+  font-size: 16px;
+  border-radius: 8px;
+}
+
+#home-create-point form .field-group .field + .field {
+  margin-left: 24px;
+}
+
+#home-create-point form select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+#home-create-point form label {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+#home-create-point form button {
+  width: 260px;
+  height: 56px;
+  background-color: var(--primary-color);
+  border-radius: 8px;
+  color: var(--text-color-button);
+  font-weight: bold;
+  font-size: 16px;
+  border: 0;
+  margin-top: 40px;
+  transition: background-color 400ms;
+}
+
+#home-create-point form button:hover {
+ background-color: var(--primary-color-hover);
+}
