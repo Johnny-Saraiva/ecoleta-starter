@@ -71,6 +71,7 @@
   padding: 16px 24px;
   font-size: 16px;
   border-radius: 8px;
+  color: var(--text-color);
 }
 
 #home-create-point form .field-group .field + .field {
@@ -86,6 +87,8 @@
 #home-create-point form label {
   font-size: 14px;
   margin-bottom: 8px;
+  color: var(--text-color);
+  font-weight: bold;
 }
 
 #home-create-point form button {
@@ -115,6 +118,7 @@
   background-color: #f5f5f5;
   list-style: none;
   border: 2px solid #f5f5f5;
+  
   border-radius: 8px;
 
   height: 180px;
@@ -138,7 +142,7 @@
   align-items: center;
   flex: 1;
 
-  color: var(--title-color);
+  color: var(--background-color-dark);
 }
 
 #home-create-point form .items-grid li.selected {

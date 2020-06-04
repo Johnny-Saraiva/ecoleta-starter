@@ -1,8 +1,11 @@
 :root {
-  --title-color: #322153;
-  --background-color: #f0f0f5;
-  --background-color-input: #f0f0f5;
-  --background-form: #fff;
+  --title-color: #f0f0f5;
+  --text-color: #f0f0f5;
+  --background-color-dark: #252525;
+  --background-color-light: #f0f0f5;
+  --background-color-input: #252525;
+  --background-form: #222430;
+  --background-form-dark: #6c6c80;
   --text-color-button: #fff;
   --primary-color: #43cb79;
   --primary-color-hover:  #2fb86e;
@@ -20,7 +23,7 @@ html {
 }
 
 body {
-  background: var(--background-color);
+  background: var(--background-color-dark);
   -webkit-font-smoothing: antialiased;
 }
 
