@@ -4,7 +4,7 @@ const db = new sqlite.Database('./src/database/database.db');
 
 module.exports = db;
 
-// db.serialize(() => {
+ db.serialize(() => {
 //   db.run(`
 //     CREATE TABLE IF NOT EXISTS places (
 //       id_place INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -50,16 +50,16 @@ module.exports = db;
 
 // db.run(query, values, afterInsert);
 
-// function ListAll(error, rows) {
-//   if (error) {
-//     return console.log(error)
-//   }
+function ListAll(error, rows) {
+  if (error) {
+    return console.log(error)
+  }
 
-//   console.log('Consulta realizada:');
-//   console.log(rows);
-// };
+  console.log('Consulta realizada:');
+  console.log(rows);
+};
 
-// db.all(`SELECT * FROM places`, ListAll);
+db.all(`SELECT * FROM places`, ListAll);
 
 // function afterDelete(error) {
 //   if (error) {
@@ -69,6 +69,6 @@ module.exports = db;
 // };
 
 
-// db.run(`DELETE FROM places `, afterDelete);
+// db.run(`DELETE FROM places WHERE id_place = ?`, [7], afterDelete);
 
-// });
+ });

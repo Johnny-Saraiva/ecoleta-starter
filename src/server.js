@@ -2,7 +2,9 @@ const express = require('express');
 const server = express();
 
 const db = require('./database/db');
+
 server.use(express.static('public'));
+server.use(express.urlencoded({ extended: true }));
 
 const nunjucks = require('nunjucks');
 nunjucks.configure('src/views', {
@@ -13,6 +15,44 @@ nunjucks.configure('src/views', {
 server.get('/', (request, response) => {
   return response.render('index.html');
 });
+
+server.post('/create-point', (request, response) => {
+  const {image, name, address, complement, state, city,items} = request.body;
+
+  const query = `
+    INSERT INTO places (
+      image,
+      name,
+      address,
+      complement,
+      state,
+      city,
+      items
+    ) VALUES (?, ?, ?, ?, ?, ?, ?);
+  `;
+  const values = [ 
+    image,
+    name,
+    address,
+    complement,
+    state,
+    city,
+    items
+  ];
+
+  function afterInsert(error) {
+  if (error) {
+    console.log(error);
+    return response.send('Erro no cadastro!');
+  }
+
+  return response.render('create-point.html', { saved: true });
+  };
+
+  db.run(query, values, afterInsert);
+
+});
+
 server.get('/create-point', (request, response) => {
   return response.render('create-point.html');
 });
