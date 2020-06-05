@@ -1,18 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;700&family=Ubuntu:ital,wght@1,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/styles/main.css">
-  <link rel="stylesheet" href="/styles/home.css">
-  <link rel="stylesheet" href="/styles/modal.css">
-  <link rel="stylesheet" href="/styles/responsive.css">
+{% extends 'layout.html' %}
 
-  <title>Ecoleta</title>
+{% set pageId = 'home-page' %}
+
+  {% block styles %} 
+    <link rel="stylesheet" href="/styles/home.css">
+    <link rel="stylesheet" href="/styles/modal.css">
+  {% endblock styles %}
+
 </head>
 <body>
-  <div id="home-page">
+  {% block content %} 
     <div class="content">
       <header>
         <img src="/assets/logo.svg" alt="Logo Ecoleta">
@@ -34,10 +31,13 @@
         </a>
       </main>
     </div>
-  </div>
-  
-  {% include 'components/modal.html' %}
+  {% endblock content %}
 
-  <script src="/scripts/index.js"></script>
-</body>
-</html>
+  {% block modal %} 
+    {% include 'components/modal.html' %}
+  {% endblock modal %}
+
+  {% block scripts %} 
+    <script src="/scripts/index.js"></script>
+  {% endblock scripts %}
+
