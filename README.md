@@ -24,7 +24,7 @@
 <br>
 
 <p align="center">
-  <img alt="GoBarber" src=".github/ecoleta.gif" width="100%">
+  <img alt="Ecoleta" src=".github/ecoleta.gif" width="100%">
 </p>
 
 <br>
@@ -44,8 +44,9 @@ This project was built with:
 - [Nodejs](https://nodejs.org/)
 - [yarn](https://yarnpkg.com/)
 - [Express](https://expressjs.com/)
+- [Nodemon](https://nodemon.io/)
 - [Nunjucks](https://mozilla.github.io/nunjucks/getting-started.html)
-- [Postgres](https://www.postgresql.org/)
+- [SQLite](https://www.sqlite.org/index.html)
 
 ## 🚀 Getting Started
 
