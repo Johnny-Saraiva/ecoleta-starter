@@ -58,7 +58,13 @@ server.get('/create-point', (request, response) => {
 });
 
 server.get('/search-results', (request, response) => {
-  db.all(`SELECT * FROM places`, function ListAll(error, rows) {
+  const { search } = request.query;
+
+  if (search == "") {
+    return response.render('search-results.html', { totalPlaces: 0 });
+  }
+
+  db.all(`SELECT * FROM places WHERE city LIKE '%${search}%'`, function ListAll(error, rows) {
     if (error) {
       return console.log(error)
     }
