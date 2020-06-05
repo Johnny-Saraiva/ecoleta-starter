@@ -27,6 +27,23 @@
     height: 250px;
   }
 
+  #home-create-point .field-group {
+    flex-direction: column;
+  }
+
+  #home-create-point form .field-group .field + .field{
+    margin-left: 0;
+  }
+
+  #home-create-point form .items-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  #home-create-point form button {
+    width: 100%;
+  }
 }
 
 @media (max-width: 1700px) {
