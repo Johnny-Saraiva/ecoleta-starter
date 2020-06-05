@@ -1,0 +1,11 @@
+{
+  "name": "ecoleta-starter",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "repository": "git@github.com:Johnny-Saraiva/ecoleta-starter.git",
+  "author": "Johnny-Saraiva <johnny.saraiva.ads@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
