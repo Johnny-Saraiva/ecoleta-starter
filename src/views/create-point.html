@@ -102,9 +102,13 @@
 {% endblock content %}
 
 {% block modal %} 
-  {% if saved %}
+  {% if saved == true %}
     {% include 'components/point-created.html' %}
   {% endif %}
+  {% if saved == false %}
+    {% include 'components/point-error.html' %}
+  {% endif %}
+
 {% endblock modal %}
 
 {% block scripts %} 

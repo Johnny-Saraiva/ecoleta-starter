@@ -43,7 +43,7 @@ server.post('/create-point', (request, response) => {
   function afterInsert(error) {
   if (error) {
     console.log(error);
-    return response.send('Erro no cadastro!');
+    return response.render('create-point.html', { saved: false });
   }
 
   return response.render('create-point.html', { saved: true });
