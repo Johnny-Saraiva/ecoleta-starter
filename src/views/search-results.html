@@ -13,32 +13,34 @@
 {% block content %} 
 {% include 'components/header.html' %}
   <main>
-    <h3>
-      <strong>2 pontos</strong> encontrados
-    </h3>
 
-    <div class="cards">
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1573219079034-f17c5c36fb7e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Colectoria">
-        <h1>Colectoria</h1>
-        <h3>Resíduos Eletrônicos, Lâmpadas</h3>
-        <p>
-          Rio do Sul, Santa Catarina <br>
-          Guilherme Gemballa, Jardim América <br>
-          Nº 260
-        </p>
+    {% if totalPlaces > 0 %}
+
+      <h3>
+        <strong>{{ totalPlaces }} pontos</strong> encontrados
+      </h3>
+
+      <div class="cards">
+        {% for place in places %}
+          <div class="card">
+            <img src="{{ place.image }}" alt="{{ place.name }}">
+            <h1>{{ place.name }}</h1>
+            <h3>{{ place.items }}</h3>
+            <p>
+              {{ place.city }}, {{ place.state }} <br>
+              {{ place.address }} <br>
+              {{ place.complement }}
+            </p>
+          </div>
+        {% endfor %}
       </div>
 
-      <div class="card">
-        <img src="https://images.unsplash.com/photo-1528323273322-d81458248d40?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60" alt="Paperssider">
-        <h1>Paperssider</h1>
-        <h3>Papéis e Papelão</h3>
-        <p>
-          Rio do Sul, Santa Catarina <br>
-          Guilherme Gemballa, Jardim América <br>
-          Nº 260
-        </p>
-      </div>
-    </div>
+    {% else %}
+
+      <h3><strong>Nenhum</strong> local encontrado!</h3>
+
+    {% endif %}
+
+    
   </main>
 {% endblock content %} 
