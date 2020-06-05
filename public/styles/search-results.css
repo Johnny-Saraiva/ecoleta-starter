@@ -1,7 +1,7 @@
 body::after {
   content: "";
   position: fixed;
-  background: #222430;
+  background: #252530;
   top: 260px;
   right: 0;
   left: 0;
@@ -23,7 +23,7 @@ body::after {
 }
 
 #page-search-results header a {
-  color: var(--title-color);
+  color: var(--text-color);
   font-weight: bold;
 
   display: flex;
@@ -69,8 +69,6 @@ body::after {
   margin-top: 32px;
   font-size: 36px;
   line-height: 41px;
-
-  color: var(--title-color);
 }
 
 #page-search-results main .card h3 {

@@ -12,7 +12,7 @@
 }
 
 #home-create-point header a {
-  color: var(--title-color);
+  color: var(--text-title-color);
   font-weight: bold;
 
   display: flex;
@@ -61,7 +61,7 @@
 
 #home-create-point form legend span {
   font-size: 14px;
-  color: var(--title-color);
+  color: var(--text-color);
 }
 
 #home-create-point form .field {
@@ -77,12 +77,12 @@
 
 #home-create-point form input,
 #home-create-point form select {
-  background-color: var(--background-color-input);
+  background-color: var(--background-form-color-input);
   border: 0;
   padding: 16px 24px;
   font-size: 16px;
   border-radius: 8px;
-  color: var(--text-color);
+  color: var(--text-color-form-dark);
 }
 
 #home-create-point form .field-group .field + .field {
@@ -126,9 +126,9 @@
 }
 
 #home-create-point form .items-grid li {
-  background-color: #f5f5f5;
+  background-color: var(--background-grid-dark);
   list-style: none;
-  border: 2px solid #f5f5f5;
+  border: 2px solid var(--background-grid-dark);
   
   border-radius: 8px;
 
@@ -153,12 +153,12 @@
   align-items: center;
   flex: 1;
 
-  color: var(--background-color-dark);
+  color: var(--text-color-dark);
 }
 
 #home-create-point form .items-grid li.selected {
-  background: #e1faec;
-  border: 2px solid #34cb79;
+  background: var(--background-grid-selected);
+  border: 2px solid var(--primary-color);
 }
 
 #home-create-point form .items-grid li img,

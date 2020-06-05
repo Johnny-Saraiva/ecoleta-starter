@@ -18,7 +18,7 @@
 }
 
 #modal .content {
-  color: white;
+  color: var(--text-color);
 
   width: 420px;
 }
@@ -43,8 +43,6 @@
 }
 
 #modal .header h1 {
-  color: white;
-
   font-size: 36px;
   line-height: 42px;
 }
@@ -58,7 +56,7 @@
 }
 
 #modal form label {
-  color: white;
+  color: var(--text-color);
 
   font-size: 18px;
   line-height: 42px;

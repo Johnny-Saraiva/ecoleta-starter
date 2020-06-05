@@ -1,14 +1,32 @@
 :root {
-  --title-color: #f0f0f5;
+  /* Text */
+  --text-title-color: #f0f0f5;
   --text-color: #f0f0f5;
+  --text-color-dark: #252525;
+  --text-color-button: #fff;
+
+  /* Background */
   --background-color-dark: #252525;
   --background-color-light: #f0f0f5;
-  --background-color-input: #252525;
+
+  /* Form */
   --background-form-dark: #3f3f44;
   --background-form-light: #6c6c80;
-  --text-color-button: #fff;
+
+  --background-form-color-input: #f0f0f5;
+
+  --text-color-form-dark: #252525;
+  --text-color-form-light: #f0f0f5;
+
+  /* Button */
   --primary-color: #43cb79;
   --primary-color-hover:  #2fb86e;
+
+  /* Grid */
+  --background-grid-dark: #f0f0f5;
+  --background-grid-light: #6c6c80;
+  --background-grid-selected:  #e1faec;
+
 }
 
 * {
@@ -33,5 +51,5 @@ a {
 
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Ubuntu', sans-serif;
-  color: var(--title-color);
+  color: var(--text-title-color);
 }
