@@ -24,7 +24,7 @@
 
 #home-page header a {
   display: flex;
-  color: var(--text-color);
+  color: var(--text-color-dark);
   font-weight: 700;
 }
 
@@ -53,7 +53,10 @@
   font-size: 24px;
   line-height: 38px;
   margin-top: 24px;
-  color: var(--text-color);
+  color: var(--text-color-dark);
+}
+body.light #home-page main p {
+  color: var(--text-color-light);
 }
 
 #home-page main a {
@@ -98,4 +101,37 @@
   background-image: url('../assets/search.svg');
   width: 20px;
   height: 20px;
+}
+
+body.light #home-page header a {
+  color: var(--text-color-light);
+}
+
+.toggleClass {
+  width: 20px;
+  height: 20px;
+  font-size: 18px;
+  border-radius: 50%;
+  background: #d1dae3;
+  color: #d1dae3;
+  font-family: Rototo;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.toggleClass:before {
+  margin-left: 25px;
+  content: 'Light Mode';
+  white-space: nowrap;
+}
+
+body.light .toggleClass {
+  background: var(--background-color-dark);
+  color: var(--background-color-dark);
+}
+
+body.light .toggleClass:before {
+  margin-left: 25px;
+  content: 'Dark Mode';
+  white-space: nowrap;
 }

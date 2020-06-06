@@ -108,8 +108,8 @@
 <path d="M368.215 382.56C368.215 382.56 364.634 381.868 364.865 379.562C364.98 377.141 368.215 371.261 368.215 371.261L379.653 370.915L380.115 382.56H368.215Z" fill="white"/>
 <defs>
 <linearGradient id="paint0_linear" x1="369.5" y1="153.5" x2="868" y2="652" gradientUnits="userSpaceOnUse">
-<stop stop-color="#F0F0F5"/>
-<stop offset="1" stop-color="#F0F0F5" stop-opacity="0"/>
+<stop stop-color="#43cb79"/>
+<stop offset="1" stop-color="#43cb79" stop-opacity="0"/>
 </linearGradient>
 </defs>
 </svg>

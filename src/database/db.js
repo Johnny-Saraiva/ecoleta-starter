@@ -50,16 +50,16 @@ module.exports = db;
 
 // db.run(query, values, afterInsert);
 
-// function ListAll(error, rows) {
-//   if (error) {
-//     return console.log(error)
-//   }
+function ListAll(error, rows) {
+  if (error) {
+    return console.log(error)
+  }
 
-//   console.log('Consulta realizada:');
-//   console.log(rows);
-// };
+  console.log('Consulta realizada:');
+  console.log(rows);
+};
 
-// db.all(`SELECT * FROM places`, ListAll);
+db.all(`SELECT * FROM places`, ListAll);
 
 // function afterDelete(error) {
 //   if (error) {

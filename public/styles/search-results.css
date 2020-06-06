@@ -2,6 +2,10 @@ body {
   background-color: #252530;
 }
 
+body.light {
+  background-color: var(--background-form-light);
+}
+
 body::after {
   content: "";
   position: absolute;
@@ -12,6 +16,9 @@ body::after {
   bottom: 0;
   height: 16rem;
   z-index: -1;
+}
+body.light::after {
+  background: var(--background-color-light);
 }
 
 #page-search-results {
@@ -28,11 +35,15 @@ body::after {
 }
 
 #page-search-results header a {
-  color: var(--text-color);
+  color: var(--text-color-dark);
   font-weight: bold;
 
   display: flex;
   align-items: center;
+}
+
+body.light #page-search-results header a {
+  color: var(--text-color-light);
 }
 
 #page-search-results header a span {
@@ -52,6 +63,11 @@ body::after {
   font-weight: normal;
   font-family: Robot, sans-serif;
   margin-bottom: 32px;
+  color: var(--text-color-dark);
+}
+
+body.light #page-search-results main h3 {
+  color: var(--text-color-light);
 }
 
 #page-search-results main .cards {
@@ -87,9 +103,27 @@ body::after {
 
   color: var(--primary-color);
 }
+body.light #page-search-results main .card h3 {
+  color: var(--primary-color);
+}
 
 #page-search-results main .card p {
   font-size: 16px;
   line-height: 26px;
-  color: var(--text-color);
+  color: var(--text-color-dark);
+}
+
+body.light #page-search-results main .card p {
+  color: var(--text-color-light);
+}
+
+.toggleClass {
+  width: 20px;
+  height: 20px;
+  font-size: 18px;
+  border-radius: 50%;
+  background: #d1dae3;
+  font-family: Rototo;
+  font-weight: bold;
+  cursor: pointer;
 }
