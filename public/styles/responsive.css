@@ -8,6 +8,15 @@
     text-align: center;
   }
 
+  #home-page header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  #home-page header .toggleClass{
+    margin: 0 auto;
+  }
+
   #home-page header a {
     position: absolute;
     bottom: 48px;
@@ -46,7 +55,7 @@
   }
 }
 
-@media (max-width: 1700px) {
+@media (min-width: 1700px) {
   #home-page {
     background-position-x: 40vw;
   }
